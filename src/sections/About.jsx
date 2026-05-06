@@ -5,7 +5,7 @@ import aboutAbstract from '../assets/about_abstract.png';
 
 const About = () => {
   return (
-    <section className="py-24 px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+    <section id="about" className="py-24 px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
       {/* Left side text */}
       <motion.div 
         initial={{ opacity: 0, y: 50 }}

@@ -20,9 +20,9 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/adityabathla945/" className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-green-400 transition-colors">
             <FaLinkedin size={20} />
           </a>
-          <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-green-400 transition-colors">
+          {/* <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-green-400 transition-colors">
             <FaTwitter size={20} />
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>
