@@ -8,16 +8,16 @@ const Footer = () => {
         <div className="text-2xl font-bold tracking-tight bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
           Aditya Bathla
         </div>
-        
+
         <div className="text-gray-400 text-sm">
           &copy; {new Date().getFullYear()} Aditya Bathla. All rights reserved.
         </div>
-        
+
         <div className="flex gap-4">
-          <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-green-400 transition-colors">
+          <a href="https://github.com/Aditya9425" className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-green-400 transition-colors">
             <FaGithub size={20} />
           </a>
-          <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-green-400 transition-colors">
+          <a href="https://www.linkedin.com/in/adityabathla945/" className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-green-400 transition-colors">
             <FaLinkedin size={20} />
           </a>
           <a href="#" className="p-2 rounded-full bg-white/5 hover:bg-white/10 hover:text-green-400 transition-colors">
