@@ -2,23 +2,24 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 import Button from '../components/Button';
+import { a } from 'framer-motion/client';
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="text-gray-400" size={24} />,
       title: "Email",
-      details: "adityabatla9@gmail.com",
+      details: <a href="mailto:[adityabathla9@gmail.com]">[adityabathla9@gmail.com]</a>,
     },
     {
       icon: <Phone className="text-gray-400" size={24} />,
       title: "Call me",
-      details: "+91 9636788945",
+      details: <a href="tel:+919636788945">+91 9636788945</a>,
     },
     {
       icon: <MapPin className="text-gray-400" size={24} />,
       title: "My location",
-      details: "Vadodara, Gujarat, India",
+      details: <a href="https://maps.app.goo.gl/D7uL26kL3iP2F1yW6">Vadodara, Gujarat, India</a>,
     }
   ];
 
@@ -102,7 +103,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <Button className="w-full py-4 mt-2 rounded-2xl bg-white text-black hover:bg-gray-200">
-              Submit
+              Send Message
             </Button>
           </form>
         </motion.div>
