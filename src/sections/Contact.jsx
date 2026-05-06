@@ -123,7 +123,7 @@ const Contact = () => {
                     <div className="p-3 bg-white/5 rounded-xl border border-white/10 group-hover:bg-white/10 transition-colors">
                       {info.icon}
                     </div>
-                    <div>
+                    <div className="text-left">
                       <h4 className="text-white font-medium mb-1">{info.title}</h4>
                       <p className="text-gray-400 text-sm">{info.details}</p>
                     </div>
