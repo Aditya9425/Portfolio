@@ -29,18 +29,18 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 px-6 max-w-6xl mx-auto">
+    <section id="projects" className="py-16 md:py-24 px-4 md:px-6 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-16"
+        className="mb-10 md:mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Featured Projects</h2>
         <p className="text-gray-400">Some of my recent work</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -51,7 +51,7 @@ const Projects = () => {
             className={`glass-panel overflow-hidden group flex flex-col ${index === 2 ? 'md:col-span-2 md:w-1/2 md:justify-self-center' : ''}`}
           >
             {/* Project Image */}
-            <div className={`h-48 w-full ${project.image} overflow-hidden border-b border-white/10`}>
+            <div className={`h-48 md:h-56 w-full ${project.image} overflow-hidden border-b border-white/10`}>
               {project.imageUrl ? (
                 <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               ) : (
@@ -61,26 +61,26 @@ const Projects = () => {
               )}
             </div>
 
-            <div className="p-8 flex-1 flex flex-col relative bg-white/5 backdrop-blur-sm z-10">
-              <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-              <p className="text-gray-400 mb-6 flex-1">{project.description}</p>
+            <div className="p-6 md:p-8 flex-1 flex flex-col relative bg-white/5 backdrop-blur-sm z-10">
+              <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3">{project.title}</h3>
+              <p className="text-gray-400 text-sm md:text-base mb-6 flex-1">{project.description}</p>
 
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
                 {project.tags.map((tag, i) => (
-                  <span key={i} className="text-xs px-3 py-1 rounded-full bg-white/10 text-gray-300">
+                  <span key={i} className="text-[10px] md:text-xs px-2 md:px-3 py-1 rounded-full bg-white/10 text-gray-300">
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="flex gap-4 mt-auto">
-                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-                  <Button variant="gradient" className="w-full py-2 text-sm">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-auto">
+                <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="w-full sm:flex-1">
+                  <Button variant="gradient" className="w-full py-2.5 md:py-2 text-sm">
                     <ExternalLink size={16} /> Live Demo
                   </Button>
                 </a>
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex-1">
-                  <Button variant="glass" className="w-full py-2 text-sm">
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="w-full sm:flex-1">
+                  <Button variant="glass" className="w-full py-2.5 md:py-2 text-sm">
                     <FaGithub size={16} /> GitHub
                   </Button>
                 </a>

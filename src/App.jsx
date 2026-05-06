@@ -9,7 +9,7 @@ import Footer from "./sections/Footer";
 
 function App() {
   return (
-    <main className="bg-background min-h-screen text-white font-sans">
+    <main className="bg-background min-h-screen text-white font-sans overflow-x-hidden w-full relative">
       <Navbar />
       <Hero />
       <About />

@@ -3,13 +3,13 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="border-t border-white/10 py-12 px-6 mt-12 relative overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
-        <div className="text-2xl font-bold tracking-tight bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
+    <footer className="border-t border-white/10 py-8 md:py-12 px-4 md:px-6 mt-8 md:mt-12 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 relative z-10">
+        <div className="text-xl md:text-2xl font-bold tracking-tight bg-gradient-to-r from-green-400 to-emerald-500 text-transparent bg-clip-text">
           Aditya Bathla
         </div>
 
-        <div className="text-gray-400 text-sm">
+        <div className="text-gray-400 text-xs md:text-sm text-center">
           &copy; {new Date().getFullYear()} Aditya Bathla. All rights reserved.
         </div>
 

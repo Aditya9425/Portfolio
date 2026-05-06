@@ -5,31 +5,31 @@ import aboutAbstract from '../assets/about_abstract.png';
 
 const About = () => {
   return (
-    <section id="about" className="py-24 px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+    <section id="about" className="py-16 md:py-24 px-4 md:px-6 max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
       {/* Left side text */}
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="flex-1 space-y-6"
+        className="flex-1 space-y-6 text-center lg:text-left"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-8">About Me</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8">About Me</h2>
         
-        <div className="space-y-4 text-gray-400 text-lg">
+        <div className="space-y-4 text-gray-400 text-base md:text-lg">
           <p>
             I am a B.Tech student with a strong passion for web development and software engineering. I enjoy building dynamic, full-stack applications that solve real-world problems.
           </p>
           <p>
             Currently, I'm deep into learning Data Structures and Algorithms in Java, while concurrently honing my skills as a Full Stack Developer.
           </p>
-          <p className="text-gray-300 border-l-2 border-green-500 pl-4 my-6">
+          <p className="text-gray-300 border-l-2 border-green-500 pl-4 my-6 text-left inline-block">
             I am open to collaboration and building impactful projects. Let's create something amazing together.
           </p>
         </div>
 
-        <div className="pt-4">
-          <Button variant="glass">Hire Me</Button>
+        <div className="pt-4 flex justify-center lg:justify-start">
+          <Button variant="glass" className="w-full sm:w-auto">Hire Me</Button>
         </div>
       </motion.div>
 
@@ -39,7 +39,7 @@ const About = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex-1 w-full max-w-md"
+        className="flex-1 w-full max-w-[280px] sm:max-w-[320px] md:max-w-md mx-auto"
       >
         <div className="aspect-square rounded-3xl glass-panel bg-gradient-to-tr from-gray-900 to-gray-800 flex items-center justify-center p-8 relative overflow-hidden">
           {/* Decorative elements */}

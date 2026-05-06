@@ -30,14 +30,14 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-24 px-6 max-w-6xl mx-auto">
+    <section id="skills" className="py-16 md:py-24 px-4 md:px-6 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-10 md:mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Skills</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Skills</h2>
         <p className="text-gray-400">My technical toolkit</p>
       </motion.div>
 
@@ -46,13 +46,13 @@ const Skills = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6"
       >
         {skills.map((skill, index) => (
           <motion.div 
             key={index}
             variants={itemVariants}
-            className="glass-panel p-8 flex flex-col items-center justify-center gap-4 hover:-translate-y-2 transition-transform duration-300 cursor-default group"
+            className="glass-panel p-6 md:p-8 flex flex-col items-center justify-center gap-3 md:gap-4 hover:-translate-y-2 transition-transform duration-300 cursor-default group"
           >
             <div className="group-hover:scale-110 transition-transform duration-300">
               {skill.icon}

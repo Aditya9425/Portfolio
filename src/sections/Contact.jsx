@@ -86,30 +86,30 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 max-w-6xl mx-auto relative">
+    <section id="contact" className="py-16 md:py-24 px-4 md:px-6 max-w-6xl mx-auto relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-green-500/10 blur-[150px] -z-10 rounded-full" />
 
       {/* Background Big Text */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full overflow-hidden flex justify-center -z-20 opacity-5 select-none pointer-events-none">
-        <h1 className="text-[15rem] font-bold">CONTACT</h1>
+        <h1 className="text-[6rem] sm:text-[8rem] md:text-[15rem] font-bold">CONTACT</h1>
       </div>
 
-      <div className="flex items-center gap-2 mb-12 w-max glass-panel px-4 py-2 rounded-full mx-auto md:mx-0">
+      <div className="flex items-center gap-2 mb-8 md:mb-12 w-max glass-panel px-4 py-2 rounded-full mx-auto md:mx-0">
         <Mail size={16} className="text-gray-400" />
         <span className="text-sm text-gray-300">Contact</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16">
         {/* Left Side */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col gap-8"
+          className="flex flex-col gap-6 md:gap-8 text-center md:text-left"
         >
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Get in touch</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Get in touch</h2>
             <p className="text-gray-400 max-w-md">
               Have a project in mind or want to collaborate? I'm always open to discussing new opportunities and ideas.
             </p>
@@ -142,14 +142,14 @@ const Contact = () => {
                   target={info.href.startsWith('http') ? '_blank' : undefined}
                   rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   key={index}
-                  className="glass-panel p-6 flex items-center justify-between group hover:bg-white/10 transition-colors cursor-pointer rounded-2xl border border-white/5"
+                  className="glass-panel p-4 sm:p-6 flex items-center justify-between group hover:bg-white/10 transition-colors cursor-pointer rounded-2xl border border-white/5"
                 >
                   {CardContent}
                 </a>
               ) : (
                 <div
                   key={index}
-                  className="glass-panel p-6 flex items-center justify-between rounded-2xl border border-white/5"
+                  className="glass-panel p-4 sm:p-6 flex items-center justify-between rounded-2xl border border-white/5"
                 >
                   {CardContent}
                 </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                 onChange={handleChange}
                 disabled={status === 'loading'}
                 placeholder="Name"
-                className="glass-input w-full bg-white/5 border-white/10 focus:border-green-400/50 focus:bg-white/10 rounded-2xl px-5 py-4 transition-all outline-none disabled:opacity-50"
+                className="glass-input w-full bg-white/5 border-white/10 focus:border-green-400/50 focus:bg-white/10 rounded-2xl px-4 py-3 sm:px-5 sm:py-4 transition-all outline-none disabled:opacity-50"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -206,7 +206,7 @@ const Contact = () => {
                 onChange={handleChange}
                 disabled={status === 'loading'}
                 placeholder="Email"
-                className="glass-input w-full bg-white/5 border-white/10 focus:border-green-400/50 focus:bg-white/10 rounded-2xl px-5 py-4 transition-all outline-none disabled:opacity-50"
+                className="glass-input w-full bg-white/5 border-white/10 focus:border-green-400/50 focus:bg-white/10 rounded-2xl px-4 py-3 sm:px-5 sm:py-4 transition-all outline-none disabled:opacity-50"
               />
             </div>
             <div className="flex flex-col gap-2 flex-1">
@@ -217,7 +217,7 @@ const Contact = () => {
                 disabled={status === 'loading'}
                 placeholder="Message"
                 rows="6"
-                className="glass-input w-full h-full resize-none bg-white/5 border-white/10 focus:border-green-400/50 focus:bg-white/10 rounded-2xl px-5 py-4 transition-all outline-none disabled:opacity-50"
+                className="glass-input w-full h-full resize-none bg-white/5 border-white/10 focus:border-green-400/50 focus:bg-white/10 rounded-2xl px-4 py-3 sm:px-5 sm:py-4 transition-all outline-none disabled:opacity-50"
               ></textarea>
             </div>
 
@@ -235,7 +235,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="w-full py-4 mt-2 rounded-2xl bg-white text-black hover:bg-gray-200 font-semibold transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center gap-2"
+              className="w-full py-3 sm:py-4 mt-2 rounded-2xl bg-white text-black hover:bg-gray-200 font-semibold transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center gap-2"
             >
               {status === 'loading' ? (
                 <>

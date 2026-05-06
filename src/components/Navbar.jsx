@@ -12,6 +12,33 @@ const Navbar = () => {
     { name: 'Contact', id: 'contact' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = links.map(link => document.getElementById(link.id));
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+      let current = activeSection;
+      sections.forEach(section => {
+        if (section) {
+          const sectionTop = section.offsetTop;
+          if (scrollPosition >= sectionTop) {
+            current = section.id;
+          }
+        }
+      });
+
+      if (current !== activeSection) {
+        setActiveSection(current);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Trigger once on mount
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [activeSection, links]);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -25,10 +52,10 @@ const Navbar = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 flex items-center justify-between px-6 py-4 glass-panel rounded-full"
+      className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-6xl z-50 flex items-center justify-between px-4 py-3 md:px-6 md:py-4 glass-panel rounded-full"
     >
       <div 
-        className="text-xl font-bold tracking-tight cursor-pointer" 
+        className="text-lg md:text-xl font-bold tracking-tight cursor-pointer whitespace-nowrap mr-4" 
         onClick={() => scrollToSection('home')}
       >
         Aditya Bathla
@@ -49,7 +76,7 @@ const Navbar = () => {
       </div>
       
       {/* Mobile view could have a simplified menu or scroll horizontal, for now we just keep the desktop visible or use a small row */}
-      <div className="md:hidden flex items-center gap-4 overflow-x-auto no-scrollbar">
+      <div className="md:hidden flex items-center gap-3 overflow-x-auto no-scrollbar pr-2">
          {links.map((link) => (
           <button
             key={link.id}
